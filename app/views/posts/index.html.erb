@@ -1,0 +1,29 @@
+<div class="header">
+<div class="container">
+  <h1>threadly</h1>
+</div>
+</div>
+
+<div class="main">
+<div class="container">
+  
+<%= form_for(@new_post) do |p| %>
+    <div class="field">
+      <%= p.label :post %>
+      <%= p.text_area :comment %>
+    </div>
+<div class="actions">
+  <%= p.submit "Send" %>
+</div>
+<% end %>
+
+
+  
+  <ul class="comments">
+    <% @all_posts.each do |p| %>
+      <li><%= p.comment %></li>
+    <% end %>
+  </ul>
+
+</div>
+</div>
